@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; 
+}
+
+button{
+    border: none !important; 
+}
+#deleteAll{
+    opacity: 50% !important;
+}
+#deleteAll:hover{
+    opacity: 100% !important;
+    transition: 1s ease-in-out 0.4ms;
+}
+body{
+    background: #85dcb8;
+}
+h2,h4{
+    color: #317a71;
+}
+input{
+    outline: none !important;
+    border: none !important;
+    border-radius:15px 0px 0px 15px !important;
+    box-shadow: none !important;
+}
+#btn{
+    border-radius: 0px 15px 15px 0px !important;
+}
+#box-wrapper>div{
+    background-color: #f0f0f0;
+    box-shadow: 0px 0px 20px 0px rgb(185, 186, 187);
+}
+i{
+    opacity:50%;
+}
+i:hover{
+    opacity: 75%;
+}
