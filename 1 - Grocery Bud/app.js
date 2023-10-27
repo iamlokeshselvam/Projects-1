@@ -81,13 +81,12 @@ class UI {
   }
 
   editIWant(e) {
-    const input = document.querySelector("#input");
+    // const input = document.querySelector("#input");
     if (e.target.classList.contains("edit")) {
       e.target.parentElement.parentElement.parentElement.remove();
       myArr.splice(e.target.parentElement.parentElement.parentElement,1)
-      const text = e.target.parentElement.parentElement.previousElementSibling.previousElementSibling.innerHTML;
-      // console.log(text);
-      input.value += text.toLowerCase();
+      const innerTexts = e.target.parentElement.parentElement.previousElementSibling.innerText.toLowerCase();
+      input.value += innerTexts;
       storage.setItems()
     }
   }
