@@ -23,16 +23,16 @@ class UI {
   addPost(e) {
 
     e.preventDefault();
+    
+    // const input = document.querySelector("#input");
 
-    if (input.value === "") {
+    if (input.value.trim() === "") {
       ui.alertEvent("alert-danger", "Please Enter The Value");
     } else {
       const input = document.querySelector("#input").value.toUpperCase().trim();
-
       const li = document.createElement("li");
-      li.className = "list-group-item d-flex justify-content-between";
-      
-      li.innerHTML = `<h6>${input}<h6/>`;
+      li.className = "list-group-item d-flex justify-content-between"; 
+      li.innerHTML = `<div class="overflow-hidden">${input}<div/>`;
       const div = document.createElement("div");
       div.className = "d-flex gap-4 align-self-center";
       const link = document.createElement("a");
@@ -161,7 +161,7 @@ document.addEventListener("DOMContentLoaded",
 ()=>{ 
    storage.getItems();
    ui.uiWrap();})
-addButton.addEventListener("click", ui.addPost);
+addButton.addEventListener("click",(e)=>ui.addPost(e));
 deleteBtn.addEventListener("click", ui.deleteAll);
 container.addEventListener("click", ui.deleteIWant);
-container.addEventListener("click",(e)=> ui.editIWant(e));
+container.addEventListener("click", ui.editIWant);
