@@ -82,6 +82,8 @@ class UI {
 
   editIWant(e) {
     // const input = document.querySelector("#input");
+
+    if(input.value===""){
     if (e.target.classList.contains("edit")) {
       e.target.parentElement.parentElement.parentElement.remove();
       myArr.splice(e.target.parentElement.parentElement.parentElement,1)
@@ -89,6 +91,7 @@ class UI {
       input.value += innerTexts;
       storage.setItems()
     }
+  }
   }
 
   alertEvent(className, message) {
