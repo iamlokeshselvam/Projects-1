@@ -65,6 +65,7 @@ class UI {
    
     ui.alertEvent("alert-danger", "Deleted Sucessful");
     storage.removeItem();
+    ui.clearField();
     ui.uiWrap();
   }
 
@@ -77,6 +78,7 @@ class UI {
     }
     if(myArr<[-1]){
       ui.uiWrap();
+      ui.clearField();
     }
   }
 
