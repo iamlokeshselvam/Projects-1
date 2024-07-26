@@ -21,8 +21,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run build (optional)
-      run: npm run build  # Replace with your build command if needed
+    # - name: Run build (optional)
+    #   run: npm run build  # Replace with your build command if needed
 
     - name: Create GitHub Release
       uses: actions/create-release@v1
@@ -38,11 +38,11 @@ jobs:
           Commit: ${{ github.sha }}
           Author: ${{ github.actor }}
 
-    - name: Upload Release Assets (optional)
-      if: always()  # Run this step even if previous steps fail
-      uses: actions/upload-release-asset@v1
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./path-to-your-artifact  # Replace with the path to your build artifact
-        asset_name: artifact-name.zip  # Replace with the name of your artifact
-        asset_content_type: application/zip  # Replace with the appropriate content type
+    # - name: Upload Release Assets (optional)
+    #   if: always()  # Run this step even if previous steps fail
+    #   uses: actions/upload-release-asset@v1
+    #   with:
+    #     upload_url: ${{ steps.create_release.outputs.upload_url }}
+    #     asset_path: ./path-to-your-artifact  # Replace with the path to your build artifact
+    #     asset_name: artifact-name.zip  # Replace with the name of your artifact
+    #     asset_content_type: application/zip  # Replace with the appropriate content type
